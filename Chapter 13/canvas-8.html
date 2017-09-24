@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="200" height="200"></canvas>
+
+    <script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    var circle = function (x, y, radius) {
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+      ctx.stroke();
+    };
+
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = "Red";
+    circle(100, 100, 10);
+    ctx.strokeStyle = "Orange";
+    circle(100, 100, 20);
+    ctx.strokeStyle = "Yellow";
+    circle(100, 100, 30);
+    ctx.strokeStyle = "Green";
+    circle(100, 100, 40);
+    ctx.strokeStyle = "Blue";
+    circle(100, 100, 50);
+    ctx.strokeStyle = "Purple";
+    circle(100, 100, 60);
+    </script>
+</body>
+</html>
